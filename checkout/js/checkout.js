@@ -1,5 +1,5 @@
-  let ul = document.querySelector(".item");
-  let ulparent = document.querySelector(".shopping-cart-list");
+let ul = document.querySelector(".item");
+let ulparent = document.querySelector(".shopping-cart-list");
 let basket = JSON.parse(localStorage.getItem("basket"));
 
 basket.forEach((devices) => {
@@ -22,19 +22,17 @@ basket.forEach((devices) => {
   ul.innerHTML += task;
 });
 
-
-
-
 let delbtn = document.querySelectorAll(".xbtn");
 
 delbtn.forEach((btn) => {
   btn.addEventListener("click", function () {
-  let li = this.parentElement;
-  let src = li.querySelector(".image img").src;
-  basket = basket.filter((device) => device.src != src);
-  li.remove();
-  ShowTotalPrice(basket);
-  ShowProductCount(basket);
-  localStorage.setItem("basket", JSON.stringify(basket));
+    let li = this.parentElement;
+    let src = li.querySelector(".image img").src;
+    basket = basket.filter((device) => device.src != src);
+    li.remove();
+    ShowTotalPrice(basket);
+    ShowProductCount(basket);
+    localStorage.setItem("basket", JSON.stringify(basket));
+  
   });
-  });
+});

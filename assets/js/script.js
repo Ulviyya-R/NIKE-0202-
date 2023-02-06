@@ -21,6 +21,7 @@ let cart = document.querySelectorAll(".carts");
 
 cart.forEach((car) => {
   car.addEventListener("click", function () {
+    ulparent.classList.remove("active");
     let basket = JSON.parse(localStorage.getItem("basket"));
     if (!basket) {
       localStorage.setItem("basket", JSON.stringify([]));
@@ -75,33 +76,35 @@ let itemul = document.querySelector(".item");
 basketShow.addEventListener("click", function () {
   ulparent.classList.toggle("active");
   let basket = JSON.parse(localStorage.getItem("basket"));
-  
+
+  itemul.innerHTML = " ";
+
   basket.forEach((item) => {
     let html = `
-   <li class ="d-flex mb-3">
+    <li class ="d-flex mb-3">
    <div class="image">
      <img src="${item.src}" alt="">
    </div>
    <div class="info">
     <h6>
-       ${item.title}
+    ${item.title}
     </h6>
     <span>
-       ${item.price}
+    ${item.price}
     </span>
     $
-   </div>
-   <div class="xbtn">
-     <b>
-       X
-     </b>
-   </div>
-  
-  </li>
-   `;
+    </div>
+    <div class="xbtn">
+    <b>
+    X
+    </b>
+    </div>
+    
+    </li>
+    `;
     itemul.innerHTML += html;
   });
-  
+
   let delbutton = document.querySelectorAll(".xbtn");
   delbutton.forEach((del) => {
     del.addEventListener("click", function () {
@@ -115,4 +118,3 @@ basketShow.addEventListener("click", function () {
     });
   });
 });
-
