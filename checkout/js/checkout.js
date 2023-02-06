@@ -2,17 +2,18 @@ let ul = document.querySelector(".item");
 let ulparent = document.querySelector(".shopping-cart-list");
 let basket = JSON.parse(localStorage.getItem("basket"));
 
-basket.forEach((devices) => {
+ul.innerHTML = " ";
+basket.forEach((shoes) => {
   let task = `
 <li class ="d-flex mb-3">
 <div class="image">
-    <img src="${devices.src}" alt="">
+    <img src="${shoes.src}" alt="">
 </div>
 <div class="info">
-   <h2>${devices.title}</h2>
-   <span>${devices.count}</span>
+   <h2>${shoes.title}</h2>
+   <span>${shoes.count}</span>
    <span>x</span>
-    <span>${devices.price}AZN</span>
+    <span>${shoes.price}AZN</span>
 </div>
 <div class="xbtn">
     <b>X</b>
@@ -30,9 +31,9 @@ delbtn.forEach((btn) => {
     let src = li.querySelector(".image img").src;
     basket = basket.filter((device) => device.src != src);
     li.remove();
-    ShowTotalPrice(basket);
-    ShowProductCount(basket);
     localStorage.setItem("basket", JSON.stringify(basket));
+    ShowTotalPrice(basket);
+    ShowCount(basket);
   
   });
 });

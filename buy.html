@@ -1,134 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./buy/css/buy.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./buy/css/buy.css" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="Checkout">
-        <div class="Card">
-          <div class="front">
-            <div class="card-chip"></div>
-            <div class="card-logo">
-              ULKA<br/>BANK
-            </div>
-            <div class="card-number">
-              <labbel>Card Number</labbel>
-              <div class="mono">
-                0000 0000 0000 0000
-              </div>
-            </div>
-            <div class="card-holder">
-              <label>Card Holder</label>
-              <div class="mono">
-                Ulviyya Rustam
-              </div>
-            </div>
-            <div class="card-date">
-              <label>Expires</label>
-              <div class="mono">
-                1/2020
-              </div>
-            </div>
+      <div class="Card">
+        <div class="front">
+          <div class="card-chip"></div>
+          <div class="card-logo">ULKA<br />BANK</div>
+          <div class="card-number">
+            <labbel>Card Number</labbel>
+            <div class="mono">0000 0000 0000 0000</div>
           </div>
-          <div class="back">
-            <div class="card-strip"></div>
-            <div class="card-logo-back">
-              ULKA<br>BANK
-            </div>
-            <div class="card-code">
-              <label>CCV</label>
-              <div class="mono">
-                123
-              </div>
-            </div>
+          <div class="card-holder">
+            <label>Card Holder</label>
+            <div class="mono">Ulviyya Rustam</div>
+          </div>
+          <div class="card-date">
+            <label>Expires</label>
+            <div class="mono">1/2020</div>
           </div>
         </div>
-        <div class="Form">
-          <form onsubmit="return false">
-            <div class="Input">
-              <label>Card Number</label><input id="number" type="number" />
-            </div>
-            <div class="Input">
-              <label>Card Holder</label><input id="holder" type="text" />
-            </div>
-            <div class="row">
-              <div class="Input">
-                <label>Month</label><select id="month">
-                  <option value="01">
-                    01
-                  </option>
-                  <option value="02">
-                    02
-                  </option>
-                  <option value="03">
-                    03
-                  </option>
-                  <option value="04">
-                    04
-                  </option>
-                  <option value="05">
-                    05
-                  </option>
-                  <option value="06">
-                    06
-                  </option>
-                  <option value="07">
-                    07
-                  </option>
-                  <option value="08">
-                    08
-                  </option>
-                  <option value="09">
-                    09
-                  </option>
-                  <option value="10">
-                    10
-                  </option>
-                  <option value="11">
-                    11
-                  </option>
-                  <option value="12">
-                    12
-                  </option>
-                </select>
-              </div>
-              <div class="Input">
-                <label>Year</label><select id="year">
-                  <option value="2019">
-                    2019
-                  </option>
-                  <option value="2020">
-                    2020
-                  </option>
-                  <option value="2021">
-                    2021
-                  </option>
-                  <option value="2022">
-                    2022
-                  </option>
-                  <option value="2023">
-                    2023
-                  </option>
-                  <option value="2024">
-                    2024
-                  </option>
-                  <option value="2025">
-                    2025
-                  </option>
-                </select>
-              </div>
-              <div class="Input">
-                <label>CCV</label><input id="ccv" type="number" />
-              </div>
-            </div>
-            <button>Checkout</button>
-          </form>
+        <div class="back">
+          <div class="card-strip"></div>
+          <div class="card-logo-back">ULKA<br />BANK</div>
+          <div class="card-code">
+            <label>CCV</label>
+            <div class="mono">123</div>
+          </div>
         </div>
       </div>
+      <div class="Form">
+        <form onsubmit="return false">
+          <div class="Input">
+            <label>Card Number</label><input id="number" type="number" />
+          </div>
+          <div class="Input">
+            <label>Card Holder</label><input id="holder" type="text" />
+          </div>
+          <div class="row">
+            <div class="Input">
+              <label>Month</label
+              ><select id="month">
+                <option value="01">01</option>
+                <option value="02">02</option>
+                <option value="03">03</option>
+                <option value="04">04</option>
+                <option value="05">05</option>
+                <option value="06">06</option>
+                <option value="07">07</option>
+                <option value="08">08</option>
+                <option value="09">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+              </select>
+            </div>
+            <div class="Input">
+              <label>Year</label
+              ><select id="year">
+                <option value="2019">2019</option>
+                <option value="2020">2020</option>
+                <option value="2021">2021</option>
+                <option value="2022">2022</option>
+                <option value="2023">2023</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+              </select>
+            </div>
+            <div class="Input">
+              <label>CCV</label><input id="ccv" type="number" />
+            </div>
+          </div>
+          <button>Checkout</button>
+        </form>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
     <script src="./buy/js/buy.js"></script>
-</body>
+  </body>
 </html>
